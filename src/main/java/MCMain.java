@@ -26,11 +26,11 @@ public class MCMain {
         for (Integer numberOfTurn : numberOfTurns) {
             log.info("Numero de rodadas: " + numberOfTurn);
 
-            int somaTotal = IntStream.range(0, numberOfTurn)
+            int totalSum = IntStream.range(0, numberOfTurn)
                     .map(i -> diceSumRandomizer())
                     .sum();
 
-            double simulAverage = (double) somaTotal / numberOfTurn;
+            double simulAverage = (double) totalSum / numberOfTurn;
             double realAverage = 7.0;
             double error = Math.abs(simulAverage - realAverage);
 
